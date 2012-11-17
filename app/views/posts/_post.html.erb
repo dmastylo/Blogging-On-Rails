@@ -1,0 +1,11 @@
+<li>
+    <span class="title">
+        <%= link_to post.title, post, class: 'title' %>
+    </span>
+    <span class="content">
+        <%= post.content %>
+    </span>
+    <span class="timestamp">
+        Posted <%= time_ago_in_words(post.created_at) %> ago.
+    </span>
+</li>
