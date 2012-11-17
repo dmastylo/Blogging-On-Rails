@@ -11,7 +11,7 @@
 #
 
 class Post < ActiveRecord::Base
-    attr_accessible :content, :created_at, :status, :title, :updated_at
+    attr_accessible :content, :status, :title
 
     validates :title, presence: true
     validates :content, presence: true

@@ -1,9 +1,13 @@
-<span class="title">
-    <h3><%= @post.title %></h3>
-</span>
-<span class="content">
-    <%= @post.content %>
-</span>
-<span class="timestamp">
-    Posted <%= time_ago_in_words(@post.created_at) %> ago.
-</span>
+<div class="row">
+    <div class="span8">
+        <span class="title">
+            <h3><%= @post.title %></h3>
+        </span>
+        <span class="content">
+            <%= @post.content %>
+        </span>
+        <span class="timestamp">
+            Posted <%= time_ago_in_words(@post.created_at) %> ago.
+        </span>
+    </div>
+</div>
