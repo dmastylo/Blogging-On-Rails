@@ -7,18 +7,24 @@
         <span class="content">
             <%= @post.content %>
         </span>
-        <span class = "content">
-            <%= @post.category %>
-        </span>
         <span class="timestamp">
             Posted <%= time_ago_in_words(@post.created_at) %> ago.
         </span>
     </div>
 </div>
 <div class="row">
+    <h3>Comments (<%= @comments.count %>)</h3>
+    <% if @comments.any? %>
+        <ul class="list-styling">
+            <%= render @comments %>
+        </ul>
+    <% end %>
+</div>
+<div class="row">
+    <h3>Leave a comment</h3>
     <%= form_for(@comment) do |f| %>
-        <%= f.text :author, placeholder: "Name" %>
-        <%= f.text :email, placeholder: "Email" %>
+        <%= f.text_field :author, placeholder: "Name" %>
+        <%= f.text_field :email, placeholder: "Email" %>
         <div class="field">
             <%= f.text_area :content, placeholder: "Compose new comment..." %>
         </div>
