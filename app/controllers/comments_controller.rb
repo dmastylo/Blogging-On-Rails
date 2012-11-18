@@ -10,8 +10,4 @@ class CommentsController < ApplicationController
             redirect_to root_url
         end
     end
-
-    def edit
-
-    end
 end

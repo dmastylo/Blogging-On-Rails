@@ -38,7 +38,8 @@ textarea
 
 .hero-unit
 {
-    padding: 15px 25px;
+    background-color: #F2F2F2;
+    padding: 15px 20px 25px 25px;
 }
 
 /* Typography */
@@ -94,7 +95,7 @@ p
         color: $navBarLinks;
         letter-spacing: -1px;
         padding-top: 9px;
-        font-weight: bold;
+        // font-weight: bold;
         line-height: 1;
 
         &:hover
@@ -124,30 +125,6 @@ p
     }
 }
 
-/* Footer */
-footer
-{
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $grayMediumLight;
-    color: $grayLight;
-
-    small
-    {
-        float: left;
-    }
-
-    a
-    {
-        color: $gray;
-
-        &:hover
-        {
-            color: $grayDarker;
-        }
-    }
-}
-
 /* Posts display */
 .list-styling
 {
@@ -158,7 +135,7 @@ footer
     {
         margin-top: -1px;
         padding: 10px;
-        border: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
     }
 }
 
@@ -193,4 +170,28 @@ footer
 {
     width: 250px;
     height: 100px;
+}
+
+/* Footer */
+footer
+{
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $grayMediumLight;
+    color: $grayLight;
+
+    small
+    {
+        float: left;
+    }
+
+    a
+    {
+        color: $gray;
+
+        &:hover
+        {
+            color: $grayDarker;
+        }
+    }
 }
