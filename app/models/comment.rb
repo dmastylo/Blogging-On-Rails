@@ -12,7 +12,7 @@
 #
 
 class Comment < ActiveRecord::Base
-    attr_accessible :author, :content, :created_at, :email
+    attr_accessible :author, :content, :email
 
     belongs_to :post
 
