@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
     def create
-        @comment = Comment.new(params[:comment])
+        @post = Post.find(params[:post_id])
+        @comment = @post.comments.new(params[:comment])
         if @comment.save
             flash[:success] = "Comment created!"
             redirect_to root_url

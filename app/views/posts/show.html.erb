@@ -13,21 +13,26 @@
     </div>
 </div>
 <div class="row">
-    <h3>Comments (<%= @comments.count %>)</h3>
-    <% if @comments.any? %>
-        <ul class="list-styling">
-            <%= render @comments %>
-        </ul>
-    <% end %>
+    <div class="span8">
+        <h3>Comments (<%= @comments.count %>)</h3>
+        <% if @comments.any? %>
+            <ul class="list-styling">
+                <%= render @comments %>
+            </ul>
+        <% end %>
+    </div>
 </div>
 <div class="row">
-    <h3>Leave a comment</h3>
-    <%= form_for(@comment) do |f| %>
-        <%= f.text_field :author, placeholder: "Name" %>
-        <%= f.text_field :email, placeholder: "Email" %>
-        <div class="field">
-            <%= f.text_area :content, placeholder: "Compose new comment..." %>
-        </div>
-        <%= f.submit "Post", class: "btn btn-large btn-primary" %>
-    <% end %>
+    <div class="span8">
+        <h3>Leave a comment</h3>
+        <%= form_for [@post, Comment.new] do |f| %>
+            <%= f.label "Name" %>
+            <%= f.text_field :author %>
+            <%= f.label "Email" %>
+            <%= f.text_field :email %>
+            <%= f.label "Compose new comment" %>
+            <%= f.text_area :content, class: "field" %>
+            <br><%= f.submit "Post", class: "btn btn-large btn-primary" %>
+        <% end %>
+    </div>
 </div>

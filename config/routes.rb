@@ -5,7 +5,9 @@ BloggingOnRails::Application.routes.draw do
 
     devise_for :admin_users, ActiveAdmin::Devise.config
 
-    resources :posts, only: [:show]
+    resources :posts, only: [:show] do
+        resources :comments
+    end
     resources :comments, only: [:create]
 
     # The priority is based upon order of creation:

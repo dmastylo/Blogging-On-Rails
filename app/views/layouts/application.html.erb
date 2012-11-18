@@ -18,7 +18,16 @@
                         <%= content_tag(:div, flash[:alert], :class => 'alert alert-info', :id => "flash_alert") if flash[:alert] %>
                     </div>
                 </div><!--/row -->
-                <%= yield %><!-- yields all content -->
+                <div class="row">
+                    <div class="span8">
+                        <%= yield %><!-- yields all content -->
+                    </div>
+                    <div class="span4">
+                        <div class="center hero-unit">
+                            <%= render 'layouts/sidebar' %>
+                        </div>
+                    </div>
+                </div>
             </div><!--/content -->
             <%= render 'layouts/footer' %>
         </div>

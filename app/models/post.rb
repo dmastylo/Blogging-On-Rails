@@ -13,12 +13,12 @@
 class Post < ActiveRecord::Base
     attr_accessible :content, :status, :title
 
-    validates :title, presence: true
+    validates :title, presence: true, uniqueness: true
     validates :content, presence: true
     validates :status, presence: true
 
     # belongs_to :category
-    has_many :comments
+    has_many :comments, :dependent => :destroy
 
     default_scope order: 'posts.created_at DESC'
 end

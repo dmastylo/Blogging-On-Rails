@@ -5,5 +5,7 @@
     <span class="content">
         <%= comment.content %>
     </span>
-    
+    <span class="timestamp">
+        Posted <%= time_ago_in_words(comment.created_at) %> ago.
+    </span>
 </li>
