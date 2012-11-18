@@ -17,5 +17,7 @@ class Post < ActiveRecord::Base
     validates :content, presence: true
     validates :status, presence: true
 
+    has_many :comments
+
     default_scope order: 'posts.created_at DESC'
 end
