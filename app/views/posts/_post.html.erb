@@ -3,7 +3,7 @@
         <%= link_to post.title, post, class: 'title' %>
     </span>
     <span class="content">
-        <%= post.content %>
+        <%= raw post.content %>
     </span>
     <span class="content">
         Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>

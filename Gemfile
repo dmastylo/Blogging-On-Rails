@@ -11,6 +11,7 @@ gem 'sqlite3'
 
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
+gem 'active_admin_editor'
 
 # Gems used only for assets and not required
 # in production environments by default.

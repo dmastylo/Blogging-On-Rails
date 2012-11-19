@@ -6,7 +6,7 @@
                 <h3><%= @post.title %></h3>
             </span>
             <span class="content">
-                <%= @post.content %>
+                <%= raw @post.content %>
             </span>
             <span class="content">
                 Tags: <%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
@@ -18,7 +18,7 @@
     </div>
     <div class="row">
         <div class="span8">
-            <h3>Comments (<%= @comments.count %>)</h3>
+            <h3><%= pluralize(@comments.count, "Comments") %></h3>
             <% if @comments.any? %>
                 <ul class="list-styling">
                     <%= render @comments %>

@@ -10,10 +10,11 @@ ActiveAdmin.register Post do
 
     # column list
     index do
+        selectable_column
         column :title
         column :content
-        column :tag_list
-        column :status
+        column :tag_list, :hint => 'Comma separated'
+        column :status, :hint => 'Draft or Published'
         column "Posted", :created_at
         column "Updated", :updated_at
         default_actions
@@ -21,11 +22,13 @@ ActiveAdmin.register Post do
 
     # form
     form do |f|
+        f.inputs "Details" do
+            f.input :title, :input_html => { :size => "80" }
+            f.input :tag_list, :input_html => { :size => "80" }
+            f.input :status, :input_html => { :size => "20" }
+        end
         f.inputs "Post" do
-            f.input :title
-            f.input :content
-            f.input :tag_list
-            f.input :status
+            f.input :content, as: :html_editor
         end
         f.buttons
     end
