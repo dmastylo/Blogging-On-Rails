@@ -12,7 +12,7 @@ ActiveAdmin.register Post do
     index do
         selectable_column
         column :title
-        column :content
+        column (:content) { |html| raw(html.content) }
         column :tag_list, :hint => 'Comma separated'
         column :status, :hint => 'Draft or Published'
         column "Posted", :created_at
