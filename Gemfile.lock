@@ -40,6 +40,8 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.3)
+      rails (~> 3.0)
     annotate (2.5.0)
       rake
     arbre (1.0.1)
@@ -152,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  acts-as-taggable-on
   annotate
   bootstrap-sass
   coffee-rails (~> 3.2.1)

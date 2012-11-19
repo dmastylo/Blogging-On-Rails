@@ -11,7 +11,8 @@
 #
 
 class Post < ActiveRecord::Base
-    attr_accessible :content, :status, :title
+    attr_accessible :content, :status, :title, :tag_list
+    acts_as_taggable
 
     validates :title, presence: true, uniqueness: true
     validates :content, presence: true
@@ -19,7 +20,8 @@ class Post < ActiveRecord::Base
 
     # belongs_to :category
     has_many :comments, :dependent => :destroy
-    has_and_belongs_to_many :tags
 
     default_scope order: 'posts.created_at DESC'
+
+    scope :unpublished, where(:status => "Draft")
 end

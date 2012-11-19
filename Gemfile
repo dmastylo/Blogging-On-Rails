@@ -28,6 +28,8 @@ gem 'jquery-rails'
 
 gem 'annotate'
 
+gem 'acts-as-taggable-on'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

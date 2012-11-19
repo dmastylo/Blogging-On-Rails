@@ -10,6 +10,8 @@ BloggingOnRails::Application.routes.draw do
     end
     resources :comments, only: [:create]
 
+    get 'tags/:tag', to: 'home#index', as: :tag
+
     # The priority is based upon order of creation:
     # first created -> highest priority.
 

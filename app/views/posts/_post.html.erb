@@ -5,6 +5,9 @@
     <span class="content">
         <%= post.content %>
     </span>
+    <span class="content">
+        Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+    </span>
     <span class="timestamp">
         Posted <%= time_ago_in_words(post.created_at) %> ago.
     </span>
