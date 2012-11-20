@@ -14,6 +14,7 @@ end
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'active_admin_editor'
+gem "rmagick", :require => 'RMagick'
 
 group :production do
   gem 'pg', '0.12.2'
