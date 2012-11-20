@@ -173,6 +173,6 @@ DEPENDENCIES
   pg (= 0.12.2)
   rails (= 3.2.8)
   rmagick
-  sass-rails (~> 3.2.3)
+  sass-rails
   sqlite3
   uglifier (>= 1.0.3)

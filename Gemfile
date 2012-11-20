@@ -11,6 +11,7 @@ group :development do
   gem 'sqlite3'
 end
 
+# Active Admin Gems
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'active_admin_editor'
