@@ -2,9 +2,9 @@ Blogging On Rails
 =======================
 Work In Progress
 
-To install on Development or Production:
+Extra Required Steps for Production:
 ----------------------------------------
 1. config/environments/production.rb config.assets.compile = true 
-2. rake db:migrate
 
-By Damian for Damian and Big Z
+ImageMagick is required! Installation instructions for it are different per
+system so simply Google your solution.
