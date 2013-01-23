@@ -1,43 +1,29 @@
 <% provide(:title, @post.title) %>
-<div class="hero-unit">
-    <div class="row">
-        <div class="span8">
-            <span class="title">
-                <h3><%= @post.title %></h3>
-            </span>
-            <span class="content">
-                <%= raw @post.content %>
-            </span>
-            <span class="content">
-                Tags: <%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
-            </span>
-            <span class="timestamp">
-                Posted <%= time_ago_in_words(@post.created_at) %> ago.
-            </span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span8">
-            <h3><%= pluralize(@comments.count, "Comments") %></h3>
-            <% if @comments.any? %>
-                <ul class="list-styling">
-                    <%= render @comments %>
-                </ul>
-            <% end %>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span8">
-            <h3>Leave Comment</h3>
-            <%= form_for [@post, Comment.new] do |f| %>
-                <%= f.label "Name" %>
-                <%= f.text_field :author %>
-                <%= f.label "Email" %>
-                <%= f.text_field :email %>
-                <%= f.label "Compose new comment" %>
-                <%= f.text_area :content, class: "field" %>
-                <br><%= f.submit "Post", class: "btn btn-large btn-primary" %>
-            <% end %>
-        </div>
-    </div>
+<div class="well">
+  <h3><%= @post.title %></h3>
+  <%= raw @post.content %>
+  <span class="content">
+    Tags: <%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(@post.created_at) %> ago.
+  </span>
+
+  <h4><%= pluralize(@comments.count, "Comments") %></h4>
+  <% if @comments.any? %>
+    <ul class="list-styling">
+      <%= render @comments %>
+    </ul>
+  <% end %>
+
+  <h4>Leave Comment</h4>
+  <%= form_for [@post, Comment.new] do |f| %>
+    <%= f.label "Name" %>
+    <%= f.text_field :author, class: "input-block-level" %>
+    <%= f.label "Email" %>
+    <%= f.text_field :email, class: "input-block-level" %>
+    <%= f.label "Compose new comment" %>
+    <%= f.text_area :content, class: "input-block-level" %>
+    <br><%= f.submit "Post", class: "btn btn-block btn-large btn-primary" %>
+  <% end %>
 </div>

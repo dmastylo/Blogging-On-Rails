@@ -16,9 +16,13 @@ $grayLight: #999;
 
     li.post
     {
-        margin-top: -1px;
         padding: 10px;
         border-bottom: 1px solid #e8e8e8;
+
+        &:last-child
+        {
+            border: 0;
+        }
     }
 }
 

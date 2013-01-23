@@ -1,13 +1,9 @@
-<div class="row">
-    <div class="span8">
-        <div class="hero-unit">
-            <% if @posts.any? %>
-                <ul class="list-styling">
-                    <%= render @posts %>
-                </ul>
-            <% else %>
-                <h3>No Posts To Display... Yet
-            <% end %>
-        </div>
-    </div>
+<div class="well">
+  <% if @posts.any? %>
+    <ul class="list-styling">
+      <%= render @posts %>
+    </ul>
+  <% else %>
+    <h3>No Posts To Display... Yet</h3>
+  <% end %>
 </div>

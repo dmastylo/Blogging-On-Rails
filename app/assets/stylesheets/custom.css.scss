@@ -8,143 +8,143 @@ $navBarLinks: #E6E6E6;
 /* Universal */
 html
 {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body
 {
-    padding-top: 85px;
+  padding-top: 85px;
 }
 
 section
 {
-    overflow: auto;
+  overflow: auto;
 }
 
 textarea
 {
-    resize: vertical;
+  resize: vertical;
 }
 
 .center
 {
-    text-align: center;
+  text-align: center;
 
-    h1
-    {
-        margin-bottom: 10px;
-    }
+  h1
+  {
+    margin-bottom: 10px;
+  }
 }
 
 .hero-unit
 {
-    background-color: #F2F2F2;
-    padding: 15px 20px 25px 25px;
+  background-color: #F2F2F2;
+  padding: 15px 20px 25px 25px;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6
 {
-    line-height: 1;
+  line-height: 1;
 }
 
 h1
 {
-    font-size: 3em;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 h2
 {
-    font-size: 1.7em;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: normal;
-    color: $grayLight;
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
 }
 
 p
 {
-    font-size: 1.1em;
-    line-height: 1.7em;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 /* Nav Bar */
 .navbar-inner
 {
-    background: #9d030d; /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlkMDMwZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ2JSIgc3RvcC1jb2xvcj0iIzhhMDIwYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZTAwMDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top,  #9d030d 0%, #8a020b 46%, #6e0007 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d030d), color-stop(46%,#8a020b), color-stop(100%,#6e0007)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d030d', endColorstr='#6e0007',GradientType=0 ); /* IE6-8 */
+  background: #9d030d; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlkMDMwZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ2JSIgc3RvcC1jb2xvcj0iIzhhMDIwYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZTAwMDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #9d030d 0%, #8a020b 46%, #6e0007 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d030d), color-stop(46%,#8a020b), color-stop(100%,#6e0007)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #9d030d 0%,#8a020b 46%,#6e0007 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d030d', endColorstr='#6e0007',GradientType=0 ); /* IE6-8 */
 
-    height: 70px;
+  height: 70px;
 
-    #logo
+  #logo
+  {
+    float: left;
+    font-size: 1.7em;
+    color: $navBarLinks;
+    letter-spacing: -1px;
+    padding-top: 10px;
+
+    &:hover
     {
-        float: left;
-        font-size: 1.7em;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+
+  .container
+  {
+    margin-top: 15px;
+
+    .nav
+    {
+      a
+      {
         color: $navBarLinks;
-        letter-spacing: -1px;
-        padding-top: 9px;
-        // font-weight: bold;
-        line-height: 1;
+        font-size: 1.1em;
+        text-shadow: 0 0 0;
 
         &:hover
         {
-            color: #FFFFFF;
-            text-decoration: none;
+          color: #FFFFFF;
+          text-decoration: none;
         }
+      }
     }
-
-    .container
-    {
-        margin-top: 15px;
-
-        .nav
-        {
-            a
-            {
-                color: $navBarLinks;
-
-                &:hover
-                {
-                    color: #FFFFFF;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+  }
 }
 
 /* Footer */
 footer
 {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $grayMediumLight;
-    color: $grayLight;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
 
-    small
+  small
+  {
+    float: left;
+  }
+
+  a
+  {
+    color: $gray;
+
+    &:hover
     {
-        float: left;
+      color: $grayDarker;
     }
-
-    a
-    {
-        color: $gray;
-
-        &:hover
-        {
-            color: $grayDarker;
-        }
-    }
+  }
 }
