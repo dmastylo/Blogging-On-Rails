@@ -11,17 +11,23 @@
 #
 
 class Post < ActiveRecord::Base
-    attr_accessible :content, :status, :title, :tag_list
-    acts_as_taggable
+  attr_accessible :content, :status, :title, :tag_list
 
-    validates :title, presence: true, uniqueness: true
-    validates :content, presence: true
-    validates :status, presence: true
+  acts_as_taggable
 
-    # belongs_to :category
-    has_many :comments, :dependent => :destroy
+  validates :title, presence: true, uniqueness: true
+  validates :content, presence: true
+  validates :status, presence: true
 
-    default_scope order: 'posts.created_at DESC'
+  # belongs_to :category
+  has_many :comments, :dependent => :destroy
 
-    scope :unpublished, where(:status => "Draft")
+  default_scope order: 'posts.created_at DESC'
+
+  scope :unpublished, where(:status => "Draft")
+  scope :published, where(:status => "Published")
+
+  def self.published
+    Post.where(status: "Published")
+  end
 end

@@ -5,10 +5,9 @@ BloggingOnRails::Application.routes.draw do
 
     devise_for :admin_users, ActiveAdmin::Devise.config
 
-    resources :posts, only: [:show] do
-        resources :comments
+    resources :posts, only: [:index, :show] do
+        resources :comments, only: [:create]
     end
-    resources :comments, only: [:create]
 
     get 'tags/:tag', to: 'home#index', as: :tag
 

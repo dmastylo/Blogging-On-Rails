@@ -125,53 +125,6 @@ p
     }
 }
 
-/* Posts display */
-.list-styling
-{
-    list-style: none;
-    margin: 10px 0 0 0;
-
-    li.post
-    {
-        margin-top: -1px;
-        padding: 10px;
-        border-bottom: 1px solid #e8e8e8;
-    }
-}
-
-.title
-{
-    font-size: 1.3em;
-    color: #848484;
-    font-weight: bold;
-    line-height: 1;
-
-    &:hover
-    {
-        color: #000000;
-        text-decoration: none;
-    }
-}
-
-.content
-{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    display: block;
-}
-
-.timestamp
-{
-    color: $grayLight;
-}
-
-/* Commenting */
-.field
-{
-    width: 250px;
-    height: 100px;
-}
-
 /* Footer */
 footer
 {

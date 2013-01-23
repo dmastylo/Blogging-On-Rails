@@ -10,5 +10,8 @@
  *
  *= require_self
  *= require custom
+ *= require comments
+ *= require home
+ *= require posts
  *= require active_admin/editor/wysiwyg
  */
