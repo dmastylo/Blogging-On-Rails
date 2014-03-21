@@ -11,7 +11,8 @@
 #
 
 class Post < ActiveRecord::Base
-  attr_accessible :content, :status, :title, :tag_list
+
+  # attr_accessible :content, :status, :title, :tag_list
 
   acts_as_taggable
 
@@ -20,14 +21,15 @@ class Post < ActiveRecord::Base
   validates :status, presence: true
 
   # belongs_to :category
-  has_many :comments, :dependent => :destroy
+  has_many :comments, dependent: :destroy
 
   default_scope order: 'posts.created_at DESC'
 
-  scope :unpublished, where(:status => "Draft")
-  scope :published, where(:status => "Published")
+  scope :unpublished, where(status: "Draft")
+  scope :published, where(status: "Published")
 
   def self.published
     Post.where(status: "Published")
   end
+
 end

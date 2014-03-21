@@ -2,15 +2,14 @@ BloggingOnRails::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   root to: "home#index"
-  match "tag_cloud" => 'home#tag_cloud'
+  get "/tag_cloud" => 'home#tag_cloud'
+  get 'tags/:tag', to: 'home#index', as: :tag
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   resources :posts, only: [:index, :show] do
     resources :comments, only: [:create]
   end
-
-  get 'tags/:tag', to: 'home#index', as: :tag
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

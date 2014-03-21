@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
+  </head>
+  <body>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
-  </head>
-  <body>
+
     <%= render 'layouts/nav_bar' %>
 
     <div class="container">
       <div class="content">
         <div class="row">
-          <div class="span12">
+          <div class="col-sm-12 col-md-12">
             <%= content_tag(:div, flash[:error], :class => 'alert alert-error', :id => "flash_error") if flash[:error] %>
             <%= content_tag(:div, flash[:notice], :class => 'alert alert-warning', :id => "flash_notice") if flash[:notice] %>
             <%= content_tag(:div, flash[:alert], :class => 'alert alert-info', :id => "flash_alert") if flash[:alert] %>
@@ -21,10 +22,10 @@
         </div><!--/row -->
 
         <div class="row">
-          <div class="span8">
+          <div class="col-sm-8 col-md-8">
             <%= yield %>
           </div>
-          <div class="span4">
+          <div class="col-sm-4 col-md-4">
             <div class="center well">
               <%= render 'layouts/sidebar' %>
             </div>
@@ -34,5 +35,6 @@
 
       <%= render 'layouts/footer' %>
     </div>
+
   </body>
 </html>

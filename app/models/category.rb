@@ -11,10 +11,12 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :name
+
+  # attr_accessible :name
 
   validates :name, presence: true
 
-  belongs_to :parent, :class_name => "Category"
-  has_many :children, :class_name => "Category", :foreign_key => "parent_id"
+  belongs_to :parent, class_name: "Category"
+  has_many :children, class_name: "Category", foreign_key: "parent_id"
+
 end

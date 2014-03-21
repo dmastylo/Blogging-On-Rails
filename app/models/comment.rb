@@ -12,12 +12,12 @@
 #
 
 class Comment < ActiveRecord::Base
-    attr_accessible :author, :content, :email
 
-    belongs_to :post
+  belongs_to :post
 
-    validates :author, presence: true
-    validates :email, presence: true
-    validates :content, presence: true
-    validates :post_id, presence: true
+  validates :author, presence: true
+  validates :email, presence: true
+  validates :content, presence: true
+  validates :post_id, presence: true
+
 end

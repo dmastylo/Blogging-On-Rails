@@ -1,11 +1,13 @@
 <li>
-    <span class="author">
-        Name: <%= comment.author %>
-    </span>
-    <span class="content">
-        <%= comment.content %>
-    </span>
-    <span class="timestamp">
-        Posted <%= time_ago_in_words(comment.created_at) %> ago.
-    </span>
+  <span class="author">
+    Name: <%= comment.author %>
+  </span>
+
+  <span class="content">
+    <%= comment.content %>
+  </span>
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(comment.created_at) %> ago.
+  </span>
 </li>

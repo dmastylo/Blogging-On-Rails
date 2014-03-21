@@ -1,14 +1,17 @@
 <li class="post">
-    <span class="title">
-        <%= link_to post.title, post, class: 'title' %>
-    </span>
-    <span class="content">
-        <%= raw post.content %>
-    </span>
-    <span class="content">
-        Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
-    </span>
-    <span class="timestamp">
-        Posted <%= time_ago_in_words(post.created_at) %> ago.
-    </span>
+  <span class="title">
+    <%= link_to post.title, post, class: 'title' %>
+  </span>
+
+  <span class="content">
+    <%= raw post.content %>
+  </span>
+
+  <span class="content">
+    Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+  </span>
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(post.created_at) %> ago.
+  </span>
 </li>

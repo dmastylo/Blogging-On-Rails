@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @post = Post.published
   end
@@ -7,4 +8,5 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comments = @post.comments
   end
+
 end
